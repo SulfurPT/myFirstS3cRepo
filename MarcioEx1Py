@@ -4,18 +4,13 @@
 import os
 import glob
 
-# a)
-direct = os.getcwd()
-  print("A diretoria atual é: ", direct)
 
 file=glob.glob('*.*')
-  print("Dentro de ", direct, "tens os seguintes ficheiros: ", file)
+print("Na pasta actual existem os seguintes ficheiros: ", file)
 
-# b) 
 file=glob.glob('*.py')
-  print("Dentro de ", direct, "tens os seguintes ficheiros em python: ", file)
+print("Na pasta actual existem os seguintes ficheiros em python: ", file)
 
-# c) 
-ficheiro = open("listadepy.txt", 'w')
+ficheiro = open("lista.txt", 'w')
 ficheiro.write(str(file))
 ficheiro.close()
