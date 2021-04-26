@@ -6,25 +6,25 @@ import ipaddress
 
 #a) 
 
-conjuntoip=ipaddress.IPv4Network('192.168.1.0/29')
-  listacinq = [ ]
-    print ("alinea a")
+rangeip=ipaddress.IPv4Network('192.168.1.0/29')
+listaip = [ ]
+print ("Resultado A")
 
-for ip in conjuntoip:
-    sinal = os.system("ping -c 1 " + str(ip) + " > /dev/null 2>&1")
-      if sinal == 0:
-          listacinq.append(f'{ip}')
+for ip in rangeip:
+    resultado = os.system("ping -c 1 " + str(ip) + " > /dev/null 2>&1")
+    if resultado == 0:
+          listaip.append(f'{ip}')
 
-listacinq=listacinq[:2]
-  print (listacinq)
+listaip=listaip[:2]
+print (listaip)
 
 
 # b) 
 
-print ("alinea b")
+print ("Resultado B")
 
 def imprip ():
-    for ip in listacinq:
+    for ip in listaip:
         print (f'{ip}')
 
 imprip ()
