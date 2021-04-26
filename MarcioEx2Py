@@ -4,24 +4,17 @@
 import os 
 import ipaddress
 
-#a) 
-
 rangeip=ipaddress.IPv4Network('192.168.1.0/24')
 listaip = [ ]
-print ("Resultado A")
 
 for ip in rangeip:
     resultado = os.system("ping -c 1 " + str(ip) + " > /dev/null 2>&1")
     if resultado == 0:
           listaip.append(f'{ip}')
 
-listaip=listaip[:2]
+listaip=listaip[:51]
 print (listaip)
 
-
-# b) 
-
-print ("Resultado B")
 
 def imprip ():
     for ip in listaip:
